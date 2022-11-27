@@ -66,4 +66,9 @@ def get_audio():
     
 
 # get_browser_ready()
-get_audio()
+# get_audio()
+action = input("press u for url and a for audio file")
+if(action=='u'):
+    get_browser_ready()
+elif(action=='a'):
+    get_audio()
