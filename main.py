@@ -52,12 +52,11 @@ def get_url():
 
 def get_audio():
     PATH="audio_files"
-    j=0
+    with open('audio_files', 'r') as audio:
+        j = audio.readlines() #j=1
     f = open('urls','r')
-
     for i in f.readlines():
         yt = YouTube('https://www.youtube.com{}'.format(i, end=''))
-        
         yt.streams.filter(only_audio=True).first().download(
             output_path=PATH,
             filename='audio{}.mp3'.format(j)
@@ -67,7 +66,7 @@ def get_audio():
 
 # get_browser_ready()
 # get_audio()
-action = input("press u for url and a for audio file")
+action = input("press u for url and a for audio file ")
 if(action=='u'):
     get_browser_ready()
 elif(action=='a'):
