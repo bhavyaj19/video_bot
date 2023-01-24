@@ -1,1 +1,2 @@
 # video_bot
+This bot allows user to download audio(folder to be named  audio_files) for any youtube video shorts channel(example in main.py) and overlay it over their given background video(folder to be named  bg_video_files).
